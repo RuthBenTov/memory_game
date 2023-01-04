@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300&family=Caveat:wght@400;600;700&family=Montserrat:wght@200;400;600&family=Pacifico&family=Sevillana&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 204, 204);
+  font-family: "Caveat", cursive;
+}
+
+.controlPanel {
+  display: flex;
+  justify-content: center;
+  font-family: "Caveat", cursive;
+  font-size: larger;
+}
+.controlPanel .header {
+  margin-top: 10px;
+  text-align: center;
+}
+.controlPanel .header h1 {
+  font-family: "Sevillana", cursive;
+  font-size: xxx-large;
+}
+.controlPanel .score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.startGameDiv {
+  position: absolute;
+  background-image: linear-gradient(120deg, rgb(166, 166, 226) 60%, rgb(249, 179, 58) 60.5%);
+  z-index: 3;
+  width: 300px;
+  height: 230px;
+  left: calc(50% - 160px);
+  top: 150px;
+  border-radius: 30px;
+  box-shadow: 4px 8px 15px gray;
+  display: flex;
+  padding: 30px;
+}
+.startGameDiv form {
+  width: 100%;
+  text-align: center;
+  font-size: x-large;
+}
+.startGameDiv form button {
+  font-family: "Pacifico", cursive;
+  font-size: x-large;
+  font-weight: lighter;
+  border-radius: 40px;
+  border: 1px solid black;
+  margin-top: 50px;
+  width: 70%;
+  height: 20%;
+}
+.startGameDiv form button:hover {
+  cursor: pointer;
+}
+
+.game {
+  margin-top: 5px;
+  width: 100%;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+}
+.game .gameMap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 80%;
+  padding: 10px 0px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px darkslategrey;
+  background-color: rgb(196, 239, 146);
+}
+.game .gameMap .imgBox {
+  flex-basis: 22%;
+  height: 22%;
+  width: 100%;
+  position: relative;
+}
+.game .gameMap .imgBox .newCover {
+  border-radius: 15px;
+  border: 1px solid whitesmoke;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, rgb(166, 166, 226) 60%, rgb(249, 179, 58) 60.5%);
+  color: white;
+  text-align: center;
+  font-size: xxx-large;
+  z-index: 1;
+  box-shadow: 4px 4px 10px rgb(76, 75, 75);
+  position: absolute;
+  top: 0;
+}
+.game .gameMap .imgBox .newCover:hover {
+  cursor: pointer;
+}
+.game .gameMap .imgBox img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 25%;
+     object-position: 25%;
+}
+
+@media screen and (max-width: 800px) {
+  .game .gameMap .imgBox {
+    height: 50%;
+    width: auto;
+  }
+  .game .gameMap .imgBox .newCover {
+    font-size: x-large;
+  }
+}

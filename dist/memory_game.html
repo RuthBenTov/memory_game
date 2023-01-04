@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game.css">
+    <title>memory game</title>
+</head>
+<body>
+    <div class="controlPanel">
+        <div class="header">
+            <h1>Memory Game</h1>
+            <h3 class="turnText">player 1 turn</h3>
+        </div>
+        <div class="score">
+            <p class="score1Text">player 1 score:</p>
+            <p class="score2Text">player 2 score:</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="startGameDiv">
+            <form>
+                <input type="radio"  name="level"  value="easy" required>easy (8 cards) <br>
+                <input type="radio" name="level" value="medium" required>medium (12 cards) <br>
+                <input type="radio" name="level" value="hard" required>hard (16 cards) <br>
+
+                <button type="button" onclick="onStart()" >Start!</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <div class="game">
+        <div class = "gameMap">
+        </div>
+    </div>
+    
+<script src="./game.js"></script>    
+</body>
+</html>
